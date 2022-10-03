@@ -15,19 +15,45 @@ const questions = ['What is your name?',
                     'What are your test?',
                     'What license do you need?',
                     ];
+const licInfo = {
+    MIT:['https://img.shields.io/badge/License-MIT-yellow.svg', 'https://opensource.org/licenses/MIT'],
+    GNU: ['License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg', 'https://www.gnu.org/licenses/gpl-3.0'],
+    none: ['','']
+
+}
+
+switch(license) {
+    case 'MIT Liscense':
+        var img = licInfo.MIT[0]
+        var link = licInfo.MIT[1]
+        break;
+    case 'GNU GPLv3':
+        var img = licInfo.GNU[0]
+        var link = licInfo.GNU[0]
+        break;
+    case '':
+        var img = ''
+        var link = ''
+        break;
+}
 
 // TODO: Create a function to write README file
-const writeToFile = ({name, title, synopsis, tech1, tech2, tech3, installation, usage,contGuide, test, license}) =>
+const writeToFile = ({name, title, synopsis, tech1, tech2, tech3, installation, usage,contGuide, test, license, img, link}) =>
     `## Table of Contents
+    * *[License](*License)
     * [${title}](*${title})
     * [Description](*Description)
     * [Installation](*Installation)
     * [Usage Information](*Usage Information)
     * [Contribution Guidelines](*Contribution Guidlines)
-    * *[License](*License)
     * [Test](*Test)
     * [Technologies](*Technologies)
+  
+    ##License
+
+    [![License: ${license}](${img})](${link})
     
+
     #${title} 
     ###${name}
     ## Description
@@ -50,9 +76,6 @@ const writeToFile = ({name, title, synopsis, tech1, tech2, tech3, installation, 
 
     ${test}
 
-    ##License
-
-    ${license}
     
     ## Techonologies
     Project is created with:
@@ -128,7 +151,6 @@ function init() {
     .then((answers) => {
         const readMeCont = writeToFile(answers);
         const license = answers.license
-        exports.license = license
 
         
 
