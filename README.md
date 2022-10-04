@@ -3,48 +3,47 @@
 * [Title](*Title)
 * [Description](*Description)
 * [Installation](*Installation)
-* [Usage Information](*Usage Information)
-* [Contribution Guidelines](*Contribution Guidlines)
+* [Usage](*Usage)
+* [Contribution](*Contribution)
 * [Test](*Test)
 * [Technologies](*Technologies)
 * [Questions](*Questions)
 
 ## License
 
-MIT
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Automated Readme 
-### Grant
+# d 
+### d
 ## Description
 
-The projexct creates a read me file with terminal inputs using node.js and inquirer
+d
 
 ## Installation
 
-clone and use
+d
 
 ## Usage Information
 
-run the index.js file wsith command node index.js, answer questions in the terminal and watchthe magic
+d
 
 ## Contribution Guidlines
 
-None so far, review liscense for more details
+d
 
 ## Test
 
-none
+d
 
 
 ## Techonologies
 Project is created with:
-* Node .js
-* npm inquirer
-* 
+* d
+* d
+* d
 ## Set-up
 
 
 ## Questions
-Grant-Ellington
-[dfjlas;dfjalskjf@gmail.com](dfjlas;dfjalskjf@gmail.com)
+d
+[d](d)
