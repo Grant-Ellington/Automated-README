@@ -89,21 +89,20 @@ const questions = [
     },
 ];
 
-const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license, getbadge, gitUser, email})=>
+const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, getbadge, gitUser, email})=>
 `## Table of Contents
 * [License](*License)
 * [Title](*Title)
 * [Description](*Description)
 * [Installation](*Installation)
-* [Usage Information](*Usage Information)
-* [Contribution Guidelines](*Contribution Guidlines)
+* [Usage](*Usage)
+* [Contribution](*Contribution)
 * [Test](*Test)
 * [Technologies](*Technologies)
 * [Questions](*Questions)
 
 ## License
 
-${license}
 ${getbadge}
 
 # ${title} 
