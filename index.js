@@ -1,18 +1,18 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-//markdown js file import
-//const generateMarkdown = require('./utils/generateMarkdown')
-//checks the input for valididity of the input of each question
-function validateInput(value) {
-    if(value !='') {
-        return true
+
+//function to create badge based on answers.
+function getbadge(badge) {
+    if(badge === 'MIT'){
+        return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+    } else if (badge === 'GNU GLPv3'){
+        return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
     } else {
-        return "please enter a  valid input"
+        return ""
     }
 }
-
-// TODO: Create an array of questions for user input
+// Question Aray
 const questions = [
     {
         type: 'input',
@@ -75,9 +75,21 @@ const questions = [
             '',
         ]
     },
+    {
+        type: 'input',
+        name: 'gitUser',
+        message: 'What are your GitHub user name?'  
+
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What are your email address?'  
+
+    },
 ];
 
-const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license})=>
+const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license, getbadge, gitUser, email})=>
     `## Table of Contents
     * *[License](*License)
     * [Title](*Title)
@@ -87,10 +99,12 @@ const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installat
     * [Contribution Guidelines](*Contribution Guidlines)
     * [Test](*Test)
     * [Technologies](*Technologies)
+    * [Questions](*Questions)
   
     ##License
     
     ${license}
+    ${getbadge}
 
     #${title} 
     ###${name}
@@ -123,88 +137,20 @@ const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installat
     ## Set-up
 
     
-    ## What was accomplished`
+    ## Questions
+    ${gitUser}
+    [${email}](${email})`
 
-// const licInfo = {
-//     MIT:['https://img.shields.io/badge/License-MIT-yellow.svg', 'https://opensource.org/licenses/MIT'],
-//     GNU: ['License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg', 'https://www.gnu.org/licenses/gpl-3.0'],
-//     none: ['','']
 
-// }
-
-// switch(license) {
-//     case 'MIT Liscense':
-//         var img = licInfo.MIT[0]
-//         var link = licInfo.MIT[1]
-//         break;
-//     case 'GNU GPLv3':
-//         var img = licInfo.GNU[0]
-//         var link = licInfo.GNU[0]
-//         break;
-//     case '':
-//         var img = ''
-//         var link = ''
-//         break;
-// }
-
-// TODO: Create a function to write README file
-// const writeToFile = (answers) => {
-//     console.log(answers)
-//     fs.writeFile('README.md', generateMarkdown(answers), (err)=> 
-//         err ? console.log('err') : console.log('success'))
-//}
-// function generateMarkdown(name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license){
-//     `## Table of Contents
-//     * *[License](*License)
-//     * [Title](*Title)
-//     * [Description](*Description)
-//     * [Installation](*Installation)
-//     * [Usage Information](*Usage Information)
-//     * [Contribution Guidelines](*Contribution Guidlines)
-//     * [Test](*Test)
-//     * [Technologies](*Technologies)
-  
-//     ##License
-    
-
-//     #${title} 
-//     ###${name}
-//     ## Description
-    
-//     ${synopsis}
-
-//     ##Installation
-
-//     ${installation}
-
-//     ##Usage Information
-
-//     ${usage}
-
-//     ##Contribution Guidlines
-
-//     ${contGuide}
-
-//     ##Test
-
-//     ${test}
-
-    
-//     ## Techonologies
-//     Project is created with:
-//     * ${tech1}
-//     * ${tech2}
-//     * ${tech3}
-//     ## Set-up
-
-    
-//     ## What was accomplished`
-// }
 // TODO: Create a function to initialize app
 function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
+            const badge = answers.license
+            console.log(badge)
+            answers.getbadge = getbadge(badge)
+            console.log(getbadge(badge))
             const READMEPage = generateMarkdown(answers)
             fs.writeFile('README.md', READMEPage, (err) =>
             err ? console.log(err) :console.log('success'))
