@@ -101,30 +101,30 @@ const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installat
 * [Technologies](*Technologies)
 * [Questions](*Questions)
 
-##License
+## License
 
 ${license}
 ${getbadge}
 
-#${title} 
-###${name}
+# ${title} 
+### ${name}
 ## Description
 
 ${synopsis}
 
-##Installation
+## Installation
 
 ${installation}
 
-##Usage Information
+## Usage Information
 
 ${usage}
 
-##Contribution Guidlines
+## Contribution Guidlines
 
 ${contGuide}
 
-##Test
+## Test
 
 ${test}
 
