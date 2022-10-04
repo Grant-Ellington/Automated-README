@@ -1,5 +1,5 @@
 ## Table of Contents
-    * *[License](*License)
+    * [License](*License)
     * [Title](*Title)
     * [Description](*Description)
     * [Installation](*Installation)
@@ -46,5 +46,5 @@
 
     
     ## Questions
-    d
-    [d](d)
+    
+    []()

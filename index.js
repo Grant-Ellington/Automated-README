@@ -91,7 +91,7 @@ const questions = [
 
 const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license, getbadge, gitUser, email})=>
     `## Table of Contents
-    * *[License](*License)
+    * [License](*License)
     * [Title](*Title)
     * [Description](*Description)
     * [Installation](*Installation)
