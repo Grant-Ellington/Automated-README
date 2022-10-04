@@ -1,6 +1,6 @@
 ## Table of Contents
     * *[License](*License)
-    * [d](*d)
+    * [Title](*Title)
     * [Description](*Description)
     * [Installation](*Installation)
     * [Usage Information](*Usage Information)
@@ -9,9 +9,8 @@
     * [Technologies](*Technologies)
   
     ##License
-
-    [![License: MIT Liscense](undefined)](undefined)
     
+    MIT
 
     #d 
     ###d
@@ -40,7 +39,7 @@
     Project is created with:
     * d
     * d
-    * undefined
+    * d
     ## Set-up
 
     

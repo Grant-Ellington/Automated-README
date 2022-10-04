@@ -16,7 +16,7 @@
 
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license){
+const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license})=>
     `## Table of Contents
     * *[License](*License)
     * [Title](*Title)
@@ -29,6 +29,7 @@ function generateMarkdown(name, title, synopsis, tech1, tech2, tech3, installati
   
     ##License
     
+    ${license}
 
     #${title} 
     ###${name}
@@ -62,6 +63,5 @@ function generateMarkdown(name, title, synopsis, tech1, tech2, tech3, installati
 
     
     ## What was accomplished`
-}
 
 module.exports = generateMarkdown;
