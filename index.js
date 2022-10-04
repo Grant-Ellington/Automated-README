@@ -90,56 +90,56 @@ const questions = [
 ];
 
 const generateMarkdown = ({name, title, synopsis, tech1, tech2, tech3, installation, usage, contGuide, test, license, getbadge, gitUser, email})=>
-    `## Table of Contents
-    * [License](*License)
-    * [Title](*Title)
-    * [Description](*Description)
-    * [Installation](*Installation)
-    * [Usage Information](*Usage Information)
-    * [Contribution Guidelines](*Contribution Guidlines)
-    * [Test](*Test)
-    * [Technologies](*Technologies)
-    * [Questions](*Questions)
-  
-    ##License
-    
-    ${license}
-    ${getbadge}
+`## Table of Contents
+* [License](*License)
+* [Title](*Title)
+* [Description](*Description)
+* [Installation](*Installation)
+* [Usage Information](*Usage Information)
+* [Contribution Guidelines](*Contribution Guidlines)
+* [Test](*Test)
+* [Technologies](*Technologies)
+* [Questions](*Questions)
 
-    #${title} 
-    ###${name}
-    ## Description
-    
-    ${synopsis}
+##License
 
-    ##Installation
+${license}
+${getbadge}
 
-    ${installation}
+#${title} 
+###${name}
+## Description
 
-    ##Usage Information
+${synopsis}
 
-    ${usage}
+##Installation
 
-    ##Contribution Guidlines
+${installation}
 
-    ${contGuide}
+##Usage Information
 
-    ##Test
+${usage}
 
-    ${test}
+##Contribution Guidlines
 
-    
-    ## Techonologies
-    Project is created with:
-    * ${tech1}
-    * ${tech2}
-    * ${tech3}
-    ## Set-up
+${contGuide}
 
-    
-    ## Questions
-    ${gitUser}
-    [${email}](${email})`
+##Test
+
+${test}
+
+
+## Techonologies
+Project is created with:
+* ${tech1}
+* ${tech2}
+* ${tech3}
+## Set-up
+
+
+## Questions
+${gitUser}
+[${email}](${email})`
 
 
 // TODO: Create a function to initialize app
