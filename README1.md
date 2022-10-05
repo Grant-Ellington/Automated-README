@@ -14,7 +14,7 @@
 # Automated README 
 ### Grant Ellingotn
 
-im## Description
+## Description
 
 This program auto generates a README.md file for your projects. It includes standard parts of a a read me file and a Liscense bar to show the liscense.
 
@@ -23,6 +23,11 @@ This program auto generates a README.md file for your projects. It includes stan
 To install, clone the repository and run node index.js to start the program. ounce the program is completed you can open the read me file created.
 
 Here you can find a video to 
+
+
+
+https://user-images.githubusercontent.com/109107643/194153445-d2d1519f-c4af-463f-9c39-3a6dbbd38c14.mov
+
 
 ## Features
 
